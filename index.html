@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ژنراتور DNS گیمینگ | کاهش پینگ</title>
+    <meta name="description" content="تولید DNS های رندوم و بهینه برای کاهش پینگ در بازی‌های آنلاین">
+    <meta name="keywords" content="dns, gaming dns, ping reducer, random ip, بازی, پینگ, دی ان اس">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    
+    <!-- Persian Fonts: Vazirmatn & Lalezar -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/misc/Farsi-Digits/Vazirmatn-FD-font-face.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #10b981; /* Emerald 500 */
+            --primary-glow: #10b98180;
+            --bg-dark: #0f172a; /* Slate 900 */
+            --bg-card: #1e293b; /* Slate 800 */
+            --text-main: #f8fafc; /* Slate 50 */
+            --text-muted: #94a3b8; /* Slate 400 */
+            
+            --font-heading: 'Lalezar', cursive;
+            --font-body: 'Vazirmatn FD', sans-serif;
+        }
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+        }
+    }
+
+    @layer utilities {
+        .font-heading {
+            font-family: var(--font-heading);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px var(--primary-glow);
+        }
+        .box-glow {
+            box-shadow: 0 0 20px -5px var(--primary-glow);
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <div id="root" class="flex-grow"></div>
+    <script type="text/babel" src="utils/ipUtils.js"></script>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="components/IpCard.js"></script>
+    <script type="text/babel" src="components/Generator.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
